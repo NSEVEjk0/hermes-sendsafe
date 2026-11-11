@@ -1,0 +1,21 @@
+name: sendsafe
+version: "0.1.0"
+description: Inspect hidden document content before AI reads it, and create verified Word and Excel sharing copies.
+author: SendSafe contributors
+license: MIT
+requires_hermes: ">=0.23.0"
+tags: [privacy, documents, excel, word, local]
+provides_tools: [sendsafe_inspect, sendsafe_prepare, sendsafe_verify]
+provides_hooks: [pre_tool_call]
+config_schema:
+  allowed_roots:
+    type: list
+    default: []
+    label: Folders SendSafe may inspect
+    description: Explicitly allowed folders on the Hermes host. Tools and the automatic read guard operate only within these folders.
+  guard_reads:
+    type: bool
+    default: true
+    label: Inspect before Hermes reads documents
+    description: Block read_file on Word and Excel documents with detected hidden content in your allowed folders. Shell commands, MCP tools and direct uploads are outside this guard.
+

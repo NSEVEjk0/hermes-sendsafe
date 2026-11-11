@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+.sendsafe-exports/
+reports/
+.local/
+node_modules/
+

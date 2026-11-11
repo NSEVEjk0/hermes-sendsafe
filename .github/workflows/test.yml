@@ -1,0 +1,15 @@
+name: Document privacy checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Verify document privacy contracts
+        run: python3 -m unittest discover -s tests -v
+      - name: Check JavaScript syntax
+        run: |
+          node --check web/app.js
+          node --check desktop/plugin.js
