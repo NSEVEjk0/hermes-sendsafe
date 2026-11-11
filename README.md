@@ -1,5 +1,7 @@
 # SendSafe
 
+**Hermes Plugin Catalog Pull Request: [NousResearch/hermes-agent#154049](https://github.com/NousResearch/hermes-agent/pull/154049)**
+
 **What you can’t see can still be shared.** SendSafe gives Hermes a local privacy checkpoint for Word and Excel documents: inspect hidden content, prepare a separate sharing copy, and verify that copy before sending it.
 
 ![SendSafe inspecting a workbook](docs/screenshots/excel-inspection.png)
